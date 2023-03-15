@@ -1,0 +1,8 @@
+.DS_Store
+src/temp.py
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/Digit Recognizer.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+cnn_mnist_datagen.csv
