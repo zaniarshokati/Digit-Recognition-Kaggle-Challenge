@@ -6,3 +6,7 @@ src/temp.py
 .idea/modules.xml
 .idea/vcs.xml
 cnn_mnist_datagen.csv
+best_model.h5
+cnn_mnist_datagen_99603.csv
+confusion_matrix.png
+loss_accuracy.png
