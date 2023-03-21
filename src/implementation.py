@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix
 import itertools
 from keras.utils.np_utils import to_categorical 
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D, BatchNormalization, PReLU
+from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D, BatchNormalization, PReLU
 from keras.optimizers import RMSprop, Adam
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
@@ -50,7 +50,8 @@ def model_Generator():
     model.add(Conv2D(32, (3, 3)))
     model.add(PReLU())
     model.add(BatchNormalization())
-    model.add(Conv2D(32, (5, 5), strides=2, padding='same'))
+    model.add(Conv2D(32, (5, 5), strides=1, padding='same'))
+    model.add(MaxPooling2D(pool_size = 2, strides = 1))
     model.add(PReLU())
     model.add(BatchNormalization())
     model.add(Dropout(0.4))
@@ -61,7 +62,8 @@ def model_Generator():
     model.add(Conv2D(64, (3, 3)))
     model.add(PReLU())
     model.add(BatchNormalization())
-    model.add(Conv2D(64, (5, 5), strides=2, padding='same'))
+    model.add(Conv2D(64, (5, 5), strides=1, padding='same'))
+    model.add(MaxPooling2D(pool_size = 2, strides = 1))
     model.add(PReLU())
     model.add(BatchNormalization())
     model.add(Dropout(0.4))
@@ -154,7 +156,7 @@ datagen = ImageDataGenerator(
 model = model_Generator()
 
 # initial
-epochs = 2
+epochs = 100
 batch_size = 32
 
 # Compile the model
