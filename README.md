@@ -1,0 +1,4 @@
+# Digit-Recognition-Kaggle-Challenge
+Digit recognition is a classic problem in the field of computer vision, with a wide range of practical applications such as optical character recognition (OCR), handwriting recognition, and digit-based security systems. The challenge in digit recognition is to train a machine learning model that can accurately classify handwritten digits from a given dataset.
+
+Recently, the Kaggle Digit Recognizer competition has gained widespread attention from machine learning enthusiasts and practitioners alike. In this competition, participants are tasked with building a model that can correctly identify handwritten digits from a dataset of tens of thousands of training images. The competition dataset is a subset of the larger MNIST database, which is widely used as a benchmark for digit recognition models.
